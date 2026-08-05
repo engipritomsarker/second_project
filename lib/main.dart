@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_2/view/all_products/all_products.dart';
 import 'package:project_2/view/home/home.dart';
 import 'package:project_2/view/screen/splash_screen.dart';
 

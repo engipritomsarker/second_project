@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:project_2/Colors/colors.dart';
+import 'package:project_2/view/all_products/all_products.dart';
 import 'package:project_2/view/custom_widget/text.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:project_2/view/home/Widget/featured_card.dart';
+import '../custom_widget/custom_card.dart';
 import '../custom_widget/search_bar.dart';
 import '../custom_widget/slider.dart';
 import '../custom_widget/title_heading.dart';
@@ -39,16 +41,9 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
         actions: [
-          Badge(
-            label: Text("0"),
-            backgroundColor: Colors.deepOrange,
-            textColor: Colors.white,
-            child: Icon(Icons.shopping_cart_outlined),
-          ),
-
+          CustomCard(),
           SizedBox(width: 10),
-        ],
-      ),
+        ],),
       body: Padding(
         padding: const EdgeInsets.all(6.0),
         child: ListView(
@@ -69,7 +64,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
             SizedBox(height: 10,),
 
-            Titleheading(text: 'Featured Products', onTap: () {},),
+            Titleheading(text: 'Featured Products', onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>AllProducts()));
+            },),
 
             SizedBox(height: 10,),
 
@@ -102,7 +99,6 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
-
 
   SizedBox categories() {
     return SizedBox(
@@ -161,5 +157,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
 }
+
+
 
 
