@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:project_2/view/all_products/all_products.dart';
-import 'package:project_2/view/home/home.dart';
-import 'package:project_2/view/screen/splash_screen.dart';
+import 'package:project_2/view/screen/all_product/Widget/filter_section.dart';
+import 'package:project_2/view/screen/all_product/all_product.dart';
+
+import 'package:project_2/view/screen/home/home.dart';
+import 'package:project_2/view/screen/products_details/products_details.dart';
+
 
 void main(){
   runApp(MyApp());
@@ -14,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-        home: HomeScreen(),
+         home: AllProduct(),
     );
   }
 }
